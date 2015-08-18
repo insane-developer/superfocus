@@ -73,6 +73,9 @@ module.exports = {
             type: 'notinindex',
             where: where
         }
+    },
+    list: function(){
+        return readConfig();
     }
 };
 
