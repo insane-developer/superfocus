@@ -11,7 +11,7 @@
     "superfocus-end": "./bin/end.js",
     "superfocus-list": "./bin/list.js",
     "superfocus-status": "./bin/status.js",
-    "superfocus-what": "./bin/what.js",
+    "superfocus-what": "./bin/what.js"
   },
   "author": "Andrey Mokrousov",
   "license": "ISC",
