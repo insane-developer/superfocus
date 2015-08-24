@@ -1,16 +1,21 @@
 #!/usr/bin/env node
-if(process.argv.length < 4){
-    console.info(process.argv[1] + ' <где> <что...>');
-    return;
-}
 var lib = require('../index.js'),
     path = require('path'),
     fs = require('fs'),
-    where = path.resolve(process.argv[2]),
-    what = process.argv.slice(3).join(' ');
+    nopt = require('nopt'),
+    args = nopt({
+        f: Boolean
+    }),
+    where = path.resolve(args.argv.remain[0]),
+    what = args.argv.remain.slice(1).join(' ');
+
+if(!args.argv.remain || args.argv.remain.length !== 2){
+    console.info(process.argv[1] + ' <где> <что...> [-f]');
+    return;
+}
 
 try{
-    lib.begin(where, what);
+    lib.begin(where, what, args.f);
     console.log('Начато дело "' + what + '" в "' + where + '"');
 }catch(e){
     require('../errors.js')(e, where, what);

@@ -4,11 +4,11 @@ var fs = require('fs'),
     config;
 
 module.exports = {
-    begin: function(where, what){
+    begin: function(where, what, force){
         var config = readConfig();
         where = resolveTarget(where);
 
-        if(where in config && config[where] !== null){
+        if(!force && where in config && config[where] !== null){
             throw {
                 type: 'busy',
                 what: config[where],
