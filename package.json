@@ -1,6 +1,6 @@
 {
   "name": "superfocus",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Список дел, привязанный к директориям в файловой системе.",
   "main": "index.js",
   "scripts": {

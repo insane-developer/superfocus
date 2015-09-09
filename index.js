@@ -87,6 +87,7 @@ function resolveTarget(where){
             where: where
         };
     }
+    where = fs.realPathSync(where);
     return where;
 }
 
