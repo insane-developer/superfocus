@@ -9,7 +9,7 @@ var lib = require('../index.js'),
     where = path.resolve(args.argv.remain[0]),
     what = args.argv.remain.slice(1).join(' ');
 
-if(!args.argv.remain || args.argv.remain.length !== 2){
+if(!args.argv.remain || args.argv.remain.length < 2){
     console.info(process.argv[1] + ' <где> <что...> [-f]');
     return;
 }

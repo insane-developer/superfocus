@@ -13,8 +13,8 @@ if(!smth.length && !empty.length){
     console.log('Нет ни одного зарегистрированного места');
 }
 if(smth.length){
-    console.log('Активные задачи:\n\t' + smth.sort().join('\n\t'));
+    console.log('Активные дела:\n\t' + smth.sort().join('\n\t'));
 }
 if(empty.length){
-    console.log('В этих местах сейчас задач нет:\n\t' + empty.sort().join('\n\t'));
+    console.log('В этих местах сейчас дел нет:\n\t' + empty.sort().join('\n\t'));
 }
